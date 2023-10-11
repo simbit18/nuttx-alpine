@@ -1,2 +1,2 @@
 # nuttx-alpine
-Apache NuttX RTOS
+Build Apache NuttX RTOS on Alpine Linux
