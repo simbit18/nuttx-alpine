@@ -85,6 +85,10 @@ jobs:
         ##  ignore warning message
         ##  Container -> ENV PIP_ROOT_USER_ACTION=ignore
         ##  Action    -> pip install --root-user-action=ignore
+        ##  WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user.
+        ##  The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+        ##  Container -> ENV PIP_NO_CACHE_DIR=false
+        ##  Action    -> pip3 install --no-cache-dir
         
     - name: Install Python 3 option
       run:  |
