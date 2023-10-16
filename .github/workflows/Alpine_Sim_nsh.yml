@@ -134,9 +134,6 @@ jobs:
 
         ## Configure the build
         tools/configure.sh -l sim:nsh
-
-        ## Disable glibc platform
-        kconfig-tweak --disable CONFIG_SIM_GLIBC_PLATFORM
         	
         ## Preserve the build config
         cp .config nuttx.config
