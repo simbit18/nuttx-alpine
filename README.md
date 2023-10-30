@@ -7,5 +7,6 @@ Build [Apache NuttX RTOS](https://github.com/apache/nuttx) on Alpine Linux
 
 | Build Status | |
 | ------------ | - |
-| **Nuttx make sim:nsh** master branch CI builds | [![Daily Build of NuttX for Alpine sim:nsh](https://github.com/simbit18/nuttx-alpine//workflows/Daily%20Build%20of%20NuttX%20for%20Alpine%20sim:nsh/badge.svg?event=push)](https://github.com/simbit18/nuttx-alpine/actions?query=workflow%3A%22Daily+Build+of+NuttX+for+Alpine+sim:nsh%22+event%3Apush) |
+| **Nuttx make sim:nsh** master branch CI builds | [![Daily Build of NuttX for Alpine make sim:nsh](https://github.com/simbit18/nuttx-alpine/workflows/Daily%20Build%20of%20NuttX%20for%20Alpine%20sim:nsh/badge.svg)](https://github.com/simbit18/nuttx-alpine/actions?query=workflow%3A%22Daily+make+sim%3Ansh%22+event%3Aschedule) |
+| **Nuttx cmake sim:nsh** master branch CI builds | [![Daily Build of NuttX for Alpine cmake sim:nsh](https://github.com/simbit18/nuttx-alpine/workflows/Daily%20Build%20of%20NuttX%20for%20Alpine%20sim:nsh/badge.svg)](https://github.com/simbit18/nuttx-alpine/actions?query=workflow%3A%22Daily+Cmake+sim%3Ansh%22+event%3Aschedule) |
 
