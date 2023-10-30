@@ -1,6 +1,6 @@
-## Build Mainline NuttX every day for Alpine Action Sim:nsh
+## Build Mainline NuttX every day for Alpine Action make sim:nsh
 
-name: Daily Build of NuttX for Alpine sim:nsh
+name: Daily Build of NuttX for Alpine make sim:nsh
 
 permissions:
   ## Allow publishing of GitHub Release
