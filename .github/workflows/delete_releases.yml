@@ -1,6 +1,6 @@
 ## This action delete older releases
 
-name: Daily delete older releases
+name: Delete older releases
 
 ## permissions:
   ## Allow publishing of GitHub Release
