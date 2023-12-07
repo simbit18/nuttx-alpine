@@ -1,10 +1,10 @@
-## Build Mainline NuttX every day for Alpine Action Cmake sim:nsh
+## This action delete older releases
 
-name: Daily Build of NuttX for Alpine Cmake sim:nsh
+name: Daily delete older releases
 
-permissions:
+## permissions:
   ## Allow publishing of GitHub Release
-  contents: write
+  ## contents: write
 
 on:
   ## Run every day at 0:30 UTC
