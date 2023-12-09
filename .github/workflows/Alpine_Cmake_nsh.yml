@@ -80,12 +80,19 @@ jobs:
         python3 \
         py3-pip
         
+      ## Alpine 3.19.x Fix pip error: externally-managed-environment
+      ## https://github.com/alpinelinux/docker-alpine/issues/361  
     - name: Create the virtual environment
       run:  |
         python3 -m venv --system-site-packages /usr/local \
-        && pip3 install setuptools wheel pyelftools cxxfilt ninja kconfiglib
+        && pip3 install --root-user-action=ignore --no-cache-dir \
+           setuptools \
+           wheel \
+           pyelftools \
+           cxxfilt \
+           ninja \
+           kconfiglib
         
-        ## activate file inside the bin directory
         ## WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager.
         ## It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
         ##  ignore warning message
@@ -95,7 +102,7 @@ jobs:
         ##  The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
         ##  Container -> ENV PIP_NO_CACHE_DIR=false
         ##  Action    -> pip3 install --no-cache-dir
-        
+        ## only for Alpine 3.18.x
     ## - name: Install Python 3 option
     ##  run:  |
     ##    pip3 install --root-user-action=ignore --no-cache-dir \
