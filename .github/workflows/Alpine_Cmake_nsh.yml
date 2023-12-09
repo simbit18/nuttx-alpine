@@ -83,8 +83,7 @@ jobs:
         
     - name: Create the virtual environment
       run:  |
-        python3 -m venv venv \
-        && source venv/bin/activate \
+        python3 -m venv --system-site-packages /usr/local \
         && pip3 install setuptools wheel pyelftools cxxfilt kconfiglib
         
         ## activate file inside the bin directory
