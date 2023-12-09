@@ -90,11 +90,19 @@ jobs:
         ##  Container -> ENV PIP_NO_CACHE_DIR=false
         ##  Action    -> pip3 install --no-cache-dir
         
-    - name: Install Python 3 option
+    
+        ## Alpine 3.19.x Fix pip error: externally-managed-environment
+        ## https://github.com/alpinelinux/docker-alpine/issues/361  
+    - name: Create the virtual environment and Install Python 3 option
       run:  |
-        pip3 install --break-system-packages --user --root-user-action=ignore --no-cache-dir \
-        pyelftools \
-        cxxfilt
+        python3 -m venv --system-site-packages /usr/local \
+        && pip3 install --root-user-action=ignore --no-cache-dir \
+           setuptools \
+           wheel \
+           pyelftools \
+           cxxfilt \
+           ninja \
+           kconfiglib
         
     - name: Install kconfig-frontends
       run:  |
