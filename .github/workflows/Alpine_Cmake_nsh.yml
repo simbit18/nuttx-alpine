@@ -94,6 +94,8 @@ jobs:
     - name: Install Python 3 option
       run:  |
         pip3 install --root-user-action=ignore --no-cache-dir \
+        setuptools \
+        wheel \
         pyelftools \
         cxxfilt \
         kconfiglib
