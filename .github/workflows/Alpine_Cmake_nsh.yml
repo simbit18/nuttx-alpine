@@ -78,13 +78,12 @@ jobs:
         cmake \
         xxd \
         python3 \
-        py3-pip \
-        ninja-build
+        py3-pip
         
     - name: Create the virtual environment
       run:  |
         python3 -m venv --system-site-packages /usr/local \
-        && pip3 install setuptools wheel pyelftools cxxfilt kconfiglib
+        && pip3 install setuptools wheel pyelftools cxxfilt ninja kconfiglib
         
         ## activate file inside the bin directory
         ## WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager.
