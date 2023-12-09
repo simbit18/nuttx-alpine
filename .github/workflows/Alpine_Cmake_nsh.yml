@@ -84,7 +84,8 @@ jobs:
     - name: Create the virtual environment
       run:  |
         python3 -m venv venv \
-        && source venv/bin/activate
+        && source venv/bin/activate \
+        && pip3 install setuptools wheel pyelftools cxxfilt kconfiglib
         
         ## activate file inside the bin directory
         ## WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager.
@@ -97,14 +98,14 @@ jobs:
         ##  Container -> ENV PIP_NO_CACHE_DIR=false
         ##  Action    -> pip3 install --no-cache-dir
         
-    - name: Install Python 3 option
-      run:  |
-        pip3 install --root-user-action=ignore --no-cache-dir \
-        setuptools \
-        wheel \
-        pyelftools \
-        cxxfilt \
-        kconfiglib
+    ## - name: Install Python 3 option
+    ##  run:  |
+    ##    pip3 install --root-user-action=ignore --no-cache-dir \
+    ##    setuptools \
+    ##    wheel \
+    ##    pyelftools \
+    ##    cxxfilt \
+    ##    kconfiglib
 
     - name: Install kconfig-frontends
       run:  |
