@@ -84,7 +84,7 @@ jobs:
     - name: Create the virtual environment
       run:  |
         python3 -m venv venv \
-        source venv/bin/activate
+        && source venv/bin/activate
         
         ## activate file inside the bin directory
         ## WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager.
