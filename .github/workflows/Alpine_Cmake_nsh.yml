@@ -78,7 +78,8 @@ jobs:
         cmake \
         xxd \
         python3 \
-        py3-pip
+        py3-pip \
+        ninja-build
 
         ## WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager.
         ## It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
@@ -95,7 +96,6 @@ jobs:
         pip3 install --break-system-packages --user --root-user-action=ignore --no-cache-dir \
         pyelftools \
         cxxfilt \
-        ninja \
         kconfiglib
 
     - name: Install kconfig-frontends
