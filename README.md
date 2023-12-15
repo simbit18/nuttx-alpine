@@ -1,5 +1,5 @@
 # nuttx-alpine
-Build [Apache NuttX RTOS](https://github.com/apache/nuttx) on Alpine Linux
+Build [Apache NuttX RTOS](https://github.com/apache/nuttx) simulator on Alpine Linux
 # Testing GitHub Actions Workflows
 
 | Configurations | Build Status |
