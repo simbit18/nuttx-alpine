@@ -114,6 +114,8 @@ jobs:
         ## && git clone https://bitbucket.org/nuttx/tools.git \
         ## && cd tools \
         cd /tmp \
+        && git clone https://github.com/patacongo/tools \
+        && cd tools \
         && git clone https://salsa.debian.org/philou/kconfig-frontends kconfig-frontends \
         && cd kconfig-frontends \
         && ./configure --enable-mconf --disable-nconf --disable-gconf --disable-qconf \
