@@ -111,8 +111,9 @@ jobs:
         
     - name: Install kconfig-frontends
       run:  |
+        ## && git clone https://bitbucket.org/nuttx/tools.git \
         cd /tmp \
-        && git clone https://bitbucket.org/nuttx/tools.git \
+        && git clone https://github.com/reclone/kconfig-frontends-win32 tools \
         && cd tools \
         && cd kconfig-frontends \
         && ./configure --enable-mconf --disable-nconf --disable-gconf --disable-qconf \
