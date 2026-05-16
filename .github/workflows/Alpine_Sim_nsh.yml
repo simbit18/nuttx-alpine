@@ -112,9 +112,9 @@ jobs:
     - name: Install kconfig-frontends
       run:  |
         ## && git clone https://bitbucket.org/nuttx/tools.git \
+        ## && cd tools \
         cd /tmp \
-        && git clone https://github.com/reclone/kconfig-frontends-win32 tools \
-        && cd tools \
+        && git clone https://github.com/reclone/kconfig-frontends-win32 kconfig-frontends \
         && cd kconfig-frontends \
         && ./configure --enable-mconf --disable-nconf --disable-gconf --disable-qconf \
         && ln -s /usr/bin/aclocal /usr/local/bin/aclocal-1.15 \
